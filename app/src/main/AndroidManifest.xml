@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.memorygeeks" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SinglePlayerActivity"
+            android:label="@string/title_activity_single_player"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name=".SinglePlayerActivity8"
+            android:label="@string/title_activity_single_player_activity8"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name=".SinglePlayerActivity10"
+            android:label="@string/title_activity_single_player_activity10"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name=".SinglePlayerActivity12"
+            android:label="@string/title_activity_single_player_activity12"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name=".SinglePlayerActivity14"
+            android:label="@string/title_activity_single_player_activity14"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name=".SinglePlayerActivity16"
+            android:label="@string/title_activity_single_player_activity16"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name=".SinglePlayerActivity18"
+            android:label="@string/title_activity_single_player_activity18"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name=".MultiPlayerActivity"
+            android:label="@string/title_activity_multi_player"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name=".MultiPlayerActivity8"
+            android:label="@string/title_activity_multi_player_activity8"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+    </application>
+
+</manifest>

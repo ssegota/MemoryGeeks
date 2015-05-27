@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MemoryGeeks</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Please input number of tiles</string>
+    <string name="sp_button">Single Player</string>
+    <string name="mp_button">Multi Player</string>
+    <string name="options_button">Options</string>
+    <string name="title_activity_single_player">SinglePlayerActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_single_player_activity8">SinglePlayerActivity8</string>
+    <string name="title_activity_single_player_activity10">SinglePlayerActivity10</string>
+    <string name="title_activity_single_player_activity12">SinglePlayerActivity12</string>
+    <string name="title_activity_single_player_activity14">SinglePlayerActivity14</string>
+    <string name="title_activity_single_player_activity16">SinglePlayerActivity16</string>
+    <string name="title_activity_single_player_activity18">SinglePlayerActivity18</string>
+    <string name="title_activity_multi_player">MultiPlayerActivity</string>
+    <string name="title_activity_multi_player_activity8">MultiPlayerActivity8</string>
+</resources>
