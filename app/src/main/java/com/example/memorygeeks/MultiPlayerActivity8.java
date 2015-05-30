@@ -62,10 +62,10 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
     //Eventualno spičkati ovo u polje naknadno radi automatizacije
     Integer[] tiles = new Integer[numberOfTiles];
     //Na ove prve dodati dovoljno pločica za Activity (Broj Activity-a kroz 2)
-    Integer tile1 = R.drawable.test;
-    Integer tile2 = R.drawable.test2;
-    Integer tile3 = R.drawable.test;
-    Integer tile4 = R.drawable.test2;
+    Integer tile1 = R.drawable.tile1;
+    Integer tile2 = R.drawable.tile2;
+    Integer tile3 = R.drawable.tile3;
+    Integer tile4 = R.drawable.tile4;
     //Ovo sadrži polje svih slika kako bi se mogle prerasporediti u random
     Integer[] sortTiles = new Integer[numberOfTiles];
     //Donje dvije ne mijenjati

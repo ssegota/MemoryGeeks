@@ -136,24 +136,24 @@ public class MyActivity extends ActionBarActivity {
                 startActivity(intent8);
                 break;
             case 10:
-                Intent intent10 = new Intent(this, SinglePlayerActivity10.class);
+                Intent intent10 = new Intent(this, MultiPlayerActivity10.class);
                 startActivity(intent10);
                 break;
 
             case 12:
-                Intent intent12 = new Intent(this, SinglePlayerActivity12.class);
+                Intent intent12 = new Intent(this, MultiPlayerActivity12.class);
                 startActivity(intent12);
                 break;
             case 14:
-                Intent intent14 = new Intent(this, SinglePlayerActivity14.class);
+                Intent intent14 = new Intent(this, MultiPlayerActivity14.class);
                 startActivity(intent14);
                 break;
             case 16:
-                Intent intent16 = new Intent(this, SinglePlayerActivity16.class);
+                Intent intent16 = new Intent(this, MultiPlayerActivity16.class);
                 startActivity(intent16);
                 break;
             case 18:
-                Intent intent18 = new Intent(this, SinglePlayerActivity18.class);
+                Intent intent18 = new Intent(this, MultiPlayerActivity18.class);
                 startActivity(intent18);
                 break;
 

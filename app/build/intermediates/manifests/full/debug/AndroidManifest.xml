@@ -94,6 +94,46 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.memorygeeks.MyActivity" />
         </activity>
+        <activity
+            android:name="com.example.memorygeeks.MultiPlayerActivity10"
+            android:label="@string/title_activity_multi_player_activity10"
+            android:parentActivityName="com.example.memorygeeks.MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.example.memorygeeks.MultiPlayerActivity12"
+            android:label="@string/title_activity_multi_player_activity12"
+            android:parentActivityName="com.example.memorygeeks.MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.example.memorygeeks.MultiPlayerActivity14"
+            android:label="@string/title_activity_multi_player_activity14"
+            android:parentActivityName="com.example.memorygeeks.MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.example.memorygeeks.MultiPlayerActivity16"
+            android:label="@string/title_activity_multi_player_activity16"
+            android:parentActivityName="com.example.memorygeeks.MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.example.memorygeeks.MultiPlayerActivity18"
+            android:label="@string/title_activity_multi_player_activity18"
+            android:parentActivityName="com.example.memorygeeks.MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.memorygeeks.MyActivity" />
+        </activity>
     </application>
 
 </manifest>
