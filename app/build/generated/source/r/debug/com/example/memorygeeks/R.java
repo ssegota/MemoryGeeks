@@ -1527,7 +1527,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c003d;
         public static final int action_mode_bar_stub=0x7f0c003c;
         public static final int action_mode_close_button=0x7f0c0025;
-        public static final int action_settings=0x7f0c005a;
+        public static final int action_settings=0x7f0c0060;
         public static final int activity_chooser_view_content=0x7f0c0026;
         public static final int alertTitle=0x7f0c0030;
         public static final int always=0x7f0c0016;
@@ -1573,6 +1573,8 @@ containing a value of this type.
         public static final int radio=0x7f0c003a;
         public static final int scoreOne=0x7f0c0053;
         public static final int scoreTwo=0x7f0c0054;
+        public static final int scoreone=0x7f0c005d;
+        public static final int scoretwo=0x7f0c005e;
         public static final int screen=0x7f0c001f;
         public static final int scrollView=0x7f0c0032;
         public static final int search_badge=0x7f0c0044;
@@ -1597,10 +1599,14 @@ containing a value of this type.
         public static final int submit_area=0x7f0c004b;
         public static final int tabMode=0x7f0c000b;
         public static final int textSpacerNoButtons=0x7f0c0033;
-        public static final int tile_number=0x7f0c0059;
+        public static final int textView2=0x7f0c005b;
+        public static final int textView4=0x7f0c005c;
+        public static final int tile_number=0x7f0c005f;
         public static final int title=0x7f0c002c;
         public static final int title_template=0x7f0c002f;
         public static final int topPanel=0x7f0c002e;
+        public static final int turnOne=0x7f0c0059;
+        public static final int turnTwo=0x7f0c005a;
         public static final int up=0x7f0c0008;
         public static final int useLogo=0x7f0c0012;
         public static final int withText=0x7f0c001a;

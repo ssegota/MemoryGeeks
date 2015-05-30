@@ -420,7 +420,7 @@ int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c003d
 int id action_mode_bar_stub 0x7f0c003c
 int id action_mode_close_button 0x7f0c0025
-int id action_settings 0x7f0c005a
+int id action_settings 0x7f0c0060
 int id activity_chooser_view_content 0x7f0c0026
 int id alertTitle 0x7f0c0030
 int id always 0x7f0c0016
@@ -466,6 +466,8 @@ int id progress_horizontal 0x7f0c0006
 int id radio 0x7f0c003a
 int id scoreOne 0x7f0c0053
 int id scoreTwo 0x7f0c0054
+int id scoreone 0x7f0c005d
+int id scoretwo 0x7f0c005e
 int id screen 0x7f0c001f
 int id scrollView 0x7f0c0032
 int id search_badge 0x7f0c0044
@@ -490,10 +492,14 @@ int id src_over 0x7f0c0022
 int id submit_area 0x7f0c004b
 int id tabMode 0x7f0c000b
 int id textSpacerNoButtons 0x7f0c0033
-int id tile_number 0x7f0c0059
+int id textView2 0x7f0c005b
+int id textView4 0x7f0c005c
+int id tile_number 0x7f0c005f
 int id title 0x7f0c002c
 int id title_template 0x7f0c002f
 int id topPanel 0x7f0c002e
+int id turnOne 0x7f0c0059
+int id turnTwo 0x7f0c005a
 int id up 0x7f0c0008
 int id useLogo 0x7f0c0012
 int id withText 0x7f0c001a

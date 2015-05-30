@@ -4,7 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.memorygeeks.SinglePlayerActivity">
+    tools:context="com.example.memorygeeks.MultiPlayerActivity8">
 
 
     <ImageButton
@@ -12,56 +12,119 @@
         android:layout_height="100dp"
         android:id="@+id/imageButton0"
         android:layout_row="0"
-        android:layout_column="0" />
+        android:layout_column="0"
+        android:background="@drawable/bg" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton6"
         android:layout_row="0"
-        android:layout_column="1" />
+        android:layout_column="1"
+        android:background="@drawable/bg" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton3"
         android:layout_row="0"
-        android:layout_column="2" />
+        android:layout_column="2"
+        android:background="@drawable/bg" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton7"
         android:layout_row="0"
-        android:layout_column="3" />
+        android:layout_column="3"
+        android:background="@drawable/bg" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton1"
         android:layout_row="1"
-        android:layout_column="0" />
+        android:layout_column="0"
+        android:background="@drawable/bg" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton4"
         android:layout_row="1"
-        android:layout_column="1" />
+        android:layout_column="1"
+        android:background="@drawable/bg" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton2"
         android:layout_row="1"
-        android:layout_column="2" />
+        android:layout_column="2"
+        android:background="@drawable/bg" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton5"
         android:layout_row="1"
-        android:layout_column="3" />
+        android:layout_column="3"
+        android:background="@drawable/bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/turnOne"
+        android:layout_row="7"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/turnTwo"
+        android:layout_row="7"
+        android:layout_column="13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PLAYER ONE"
+        android:id="@+id/textView2"
+        android:layout_row="8"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PLAYER TWO"
+        android:id="@+id/textView4"
+        android:layout_row="8"
+        android:layout_column="13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/scoreone"
+        android:layout_row="9"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/scoretwo"
+        android:layout_row="9"
+        android:layout_column="13" />
+
 
 </GridLayout>
 <!-- From: file:/home/sandi/AndroidStudioProjects/MemoryGeeks/app/src/main/res/layout/activity_multi_player_activity8.xml -->

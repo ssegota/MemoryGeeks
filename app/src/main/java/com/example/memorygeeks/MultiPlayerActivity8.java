@@ -47,6 +47,7 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
 
     final Handler handler = new Handler();
     final long delay=500;
+
     //...
     //Provjera "otvorenosti" pločice
     //Promjeniti u boolean maybe?
@@ -77,7 +78,10 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
     boolean turn = true;
     Integer scorePlayerOne = 0;
     Integer scorePlayerTwo = 0;
-
+    TextView TextViewOne;
+    TextView TextViewTwo;
+    TextView TextViewThree;
+    TextView TextViewFour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,6 +149,7 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
         for(int i = 0; i<numberOfTiles; i++){
             isFound[i]=false;
         }
+
 
     }
 
@@ -502,12 +507,23 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
         Log.d("SCORE", "Two:" + scorePlayerTwo);
         Log.d("TURN", "" + turn);
 
+        TextView TextViewOne = (TextView) findViewById(R.id.scoreone);
+        TextView TextViewTwo = (TextView) findViewById(R.id.scoretwo);
+        TextViewOne.setText(Integer.toString(scorePlayerOne));
+        TextViewTwo.setText(Integer.toString(scorePlayerTwo));
 
+        TextView TextViewThree = (TextView) findViewById(R.id.turnOne);
+        TextView TextViewFour = (TextView) findViewById(R.id.turnTwo);
+        //Postavi zvjezdicu za krug
+        if(turn){
+            TextViewThree.setText("*");
+            TextViewFour.setText("");
+        }
+        else{
+            TextViewThree.setText("");
+            TextViewFour.setText("*");
+        }
 
-
-
-        //score1.setText(Integer.toString(scorePlayerOne));
-        //score2.setText(Integer.toString(scorePlayerTwo));
 
         if(!turn){
             isDone();
@@ -561,4 +577,5 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
             tiles[i]=sortTiles[type[i]];
         }
     }
+
 }
