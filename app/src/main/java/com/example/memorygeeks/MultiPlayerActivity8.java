@@ -1,6 +1,7 @@
 package com.example.memorygeeks;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,7 +17,6 @@ import com.example.memorygeeks.R;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
 public class MultiPlayerActivity8 extends ActionBarActivity {
@@ -45,6 +45,8 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
     ImageButton button6;
     ImageButton button7;
 
+    final Handler handler = new Handler();
+    final long delay=500;
     //...
     //Provjera "otvorenosti" pločice
     //Promjeniti u boolean maybe?
@@ -233,15 +235,7 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
 
 
     }
-    public void pause(long miliseconds){
-        try {
-            Log.d("WAITING", "Entered sleep.");
-            Thread.sleep(miliseconds);
-            Log.d("WAITING", "Finished sleep");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+
     //Definicija listenera
     //Po jedan listener za svaki gumb kao i vlastita metoda
 
@@ -263,19 +257,27 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
             button0.setBackgroundResource(tiles[identifier]);
             Log.d("TAGTAG", "Finished setting data for button" + identifier);
 
-            
 
-            checker(identifier);
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    checker(identifier);  // your method call
+                }
+            }, delay);
 
         };
 
     };
     //Integer stat=0;
     View.OnClickListener imgButton0Handler1 = new View.OnClickListener() {
+        int identifier=1;
 
         public void onClick(View v) {
             //Promjeni identifier na primjereni (npr. 1)
-            int identifier=1;
+
             Log.d("TAGTAG", "button" + identifier);
             Log.d("TAGTAG", "Set TILE " +tiles[identifier] +  " on button" + identifier);
             if(isFound[identifier]==true)   return;
@@ -286,20 +288,25 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
             //Postavi background na zadani
             Log.d("TAGTAG", "Finished setting FOUND and CHECK fields for button" + identifier);
             Log.d("TAGTAG", "Set TILE " + tiles[identifier] + " on button" + identifier);
-
-
             button1.setBackgroundResource(tiles[identifier]);
-
             Log.d("TAGTAG", "Finished setting data for button" + identifier);
-            checker(identifier);
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    checker(identifier);  // your method call
+                }
+            }, delay);
         }
     };
 
     View.OnClickListener imgButton0Handler2 = new View.OnClickListener() {
-
+        int identifier=2;
         public void onClick(View v) {
             //Promjeni identifier na primjereni (npr. 1)
-            int identifier=2;
+
             Log.d("TAGTAG", "button" + identifier);
             if(isFound[identifier]==true)   return;
             //Postavi pločicu na otvorenu
@@ -311,15 +318,23 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
             Log.d("TAGTAG", "Set TILE " + tiles[identifier] + " on button" + identifier);
             button2.setBackgroundResource(tiles[identifier]);
             Log.d("TAGTAG", "Finished setting data for button" + identifier);
-            checker(identifier);
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    checker(identifier);  // your method call
+                }
+            }, delay);
         }
     };
 
     View.OnClickListener imgButton0Handler3 = new View.OnClickListener() {
-
+        int identifier=3;
         public void onClick(View v) {
             //Promjeni identifier na primjereni (npr. 1)
-            int identifier=3;
+
             Log.d("TAGTAG", "button" + identifier);
             if(isFound[identifier]==true)   return;
             //Postavi pločicu na otvorenu
@@ -332,16 +347,24 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
             button3.setBackgroundResource(tiles[identifier]);
             Log.d("TAGTAG", "Finished setting data for button" + identifier);
 
-            checker(identifier);
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    checker(identifier);  // your method call
+                }
+            }, delay);
         }
 
     };
 
     View.OnClickListener imgButton0Handler4 = new View.OnClickListener() {
-
+        int identifier=4;
         public void onClick(View v) {
             //Promjeni identifier na primjereni (npr. 1)
-            int identifier=4;
+
             Log.d("TAGTAG", "button" + identifier);
             if(isFound[identifier]==true)   return;
             //Postavi pločicu na otvorenu
@@ -352,15 +375,23 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
             Log.d("TAGTAG", "Set TILE " + tiles[identifier] + " on button" + identifier);
             button4.setBackgroundResource(tiles[identifier]);
             Log.d("TAGTAG", "Finished setting data for button" + identifier);
-            checker(identifier);
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    checker(identifier);  // your method call
+                }
+            }, delay);
         }
     };
     //Integer stat=0;
     View.OnClickListener imgButton0Handler5 = new View.OnClickListener() {
-
+        int identifier=5;
         public void onClick(View v) {
             //Promjeni identifier na primjereni (npr. 1)
-            int identifier=5;
+
             Log.d("TAGTAG", "button" + identifier);
             if(isFound[identifier]==true)   return;
             //Postavi pločicu na otvorenu
@@ -372,15 +403,23 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
             Log.d("TAGTAG", "Set TILE " + tiles[identifier] + " on button" + identifier);
             button5.setBackgroundResource(tiles[identifier]);
             Log.d("TAGTAG", "Finished setting data for button" + identifier);
-            checker(identifier);
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    checker(identifier);  // your method call
+                }
+            }, delay);
         }
     };
 
     View.OnClickListener imgButton0Handler6 = new View.OnClickListener() {
-
+        int identifier=6;
         public void onClick(View v) {
             //Promjeni identifier na primjereni (npr. 1)
-            int identifier=6;
+
             Log.d("TAGTAG", "button" + identifier);
             if(isFound[identifier]==true)   return;
             //Postavi pločicu na otvorenu
@@ -392,15 +431,23 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
             Log.d("TAGTAG", "Set TILE " + tiles[identifier] + " on button" + identifier);
             button6.setBackgroundResource(tiles[identifier]);
             Log.d("TAGTAG", "Finished setting data for button" + identifier);
-            checker(identifier);
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    checker(identifier);  // your method call
+                }
+            }, delay);
         }
     };
 
     View.OnClickListener imgButton0Handler7 = new View.OnClickListener() {
-
+        int identifier=7;
         public void onClick(View v) {
             //Promjeni identifier na primjereni (npr. 1)
-            int identifier=7;
+
             Log.d("TAGTAG", "button" + identifier);
             if(isFound[identifier]==true)   return;
             //Postavi pločicu na otvorenu
@@ -412,7 +459,15 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
             Log.d("TAGTAG", "Set TILE " + tiles[identifier] + " on button" + identifier);
             button7.setBackgroundResource(tiles[identifier]);
             Log.d("TAGTAG", "Finished setting data for button" + identifier);
-            checker(identifier);
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    checker(identifier);  // your method call
+                }
+            }, delay);
         }
 
     };
