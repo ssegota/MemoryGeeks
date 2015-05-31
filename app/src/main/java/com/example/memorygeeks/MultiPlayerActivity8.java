@@ -554,6 +554,7 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
     public void tileSetter(Integer[] type, Integer[] tiles){
         Integer[] amounts = new Integer[numberOfTiles/2];
         Integer randAssign;
+        Integer last=-1;
 
         for(int i = 0; i< numberOfTiles/2; i++){
             amounts[i] = 2;
@@ -563,14 +564,16 @@ public class MultiPlayerActivity8 extends ActionBarActivity {
 
             while(true){
                 randAssign = randInt(0, numberOfTiles/2);
+                if(randAssign==last)           continue;
                 if( amounts[randAssign] > 0)   break;
             }
 
             type[i]=randAssign;
             amounts[randAssign] -= 1;
 
-            Log.d("RANDOM_ASSIGN", "iter " + i + " rand " + type[i]);
+            Log.d("RANDOM_ASSIGN", "iter " + i + " rand " + type[i] + " chosen random " + randAssign);
 
+            last=randAssign;
         }
 
         for(int i = 0; i < numberOfTiles; i++){

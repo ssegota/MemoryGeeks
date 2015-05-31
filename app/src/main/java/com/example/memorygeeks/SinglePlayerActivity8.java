@@ -17,6 +17,7 @@ import com.example.memorygeeks.R;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.LogRecord;
 
 public class SinglePlayerActivity8 extends ActionBarActivity {
@@ -62,10 +63,10 @@ public class SinglePlayerActivity8 extends ActionBarActivity {
     //Eventualno spičkati ovo u polje naknadno radi automatizacije
     Integer[] tiles = new Integer[numberOfTiles];
     //Na ove prve dodati dovoljno pločica za Activity (Broj Activity-a kroz 2)
-    Integer tile1 = R.drawable.test;
-    Integer tile2 = R.drawable.test2;
-    Integer tile3 = R.drawable.test;
-    Integer tile4 = R.drawable.test2;
+    Integer tile1 = R.drawable.tile1;
+    Integer tile2 = R.drawable.tile2;
+    Integer tile3 = R.drawable.tile3;
+    Integer tile4 = R.drawable.tile4;
     //Ovo sadrži polje svih slika kako bi se mogle prerasporediti u random
     Integer[] sortTiles = new Integer[numberOfTiles];
     //Donje dvije ne mijenjati
@@ -579,7 +580,7 @@ public class SinglePlayerActivity8 extends ActionBarActivity {
         }
     }
 
-
+/*
     public void computerPlay(){
         isDone();
         //Uhvati dva random broja
@@ -604,12 +605,53 @@ public class SinglePlayerActivity8 extends ActionBarActivity {
         //
         Log.d("COMPUTER_PLAY", "PLAYING:" + firstChoice);
         button_field[possibleArray[firstChoice]].performClick();
-
+        try {
+            Log.d("EXCEPTION", "DELAYING");
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Log.d("EXCEPTION", "TIME DELAY ERROR");
+        }
 
         Log.d("COMPUTER_PLAY", "PLAYING:" + secondChoice);
         button_field[possibleArray[secondChoice]].performClick();
-
+        try {
+            Log.d("EXCEPTION", "DELAYING");
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Log.d("EXCEPTION", "TIME DELAY ERROR");
+        }
     };
 
+*/
+    public void computerPlay(){
+        int firstChoice;
+        int secondChoice;
+
+        List<Integer> possible = new ArrayList<Integer>();
+
+        for (int i = 0; i<numberOfTiles; i++){
+            if(!isFound[i]) possible.add(i);
+        }
+
+        firstChoice = randInt(0, possible.size());
+        secondChoice = randInt(0, possible.size());
+
+        while(true){
+            if(secondChoice==firstChoice)   secondChoice = randInt(0, possible.size());
+            else break;
+        }
+        Integer[] possibleArray = new Integer[ possible.size() ];
+        possible.toArray(possibleArray);
+
+        button_field[possibleArray[firstChoice]].performClick();
+        Log.d("SLEEP", "Entering sleep...");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Log.d("SLEEP", "Entering sleep...");
+        button_field[possibleArray[secondChoice]].performClick();
+    }
 
 }
