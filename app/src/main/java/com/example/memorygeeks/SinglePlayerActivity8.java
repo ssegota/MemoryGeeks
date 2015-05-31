@@ -529,6 +529,16 @@ public class SinglePlayerActivity8 extends ActionBarActivity {
         if(!turn){
             isDone();
             computerPlay();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    computerPlay();  // your method call
+                }
+            }, delay+100);
         }
         isDone();
     };
@@ -580,52 +590,8 @@ public class SinglePlayerActivity8 extends ActionBarActivity {
         }
     }
 
-/*
-    public void computerPlay(){
-        isDone();
-        //Uhvati dva random broja
-        Integer firstChoice=0;
-        Integer secondChoice=0;
-
-        List<Integer> possible = new ArrayList<Integer>();
-
-        for(int i = 0; i<numberOfTiles; i++){
-            if(!isFound[i]) possible.add(i);
-        }
-        Integer[] possibleArray = new Integer[ possible.size() ];
-        possible.toArray(possibleArray);
-
-        firstChoice = randInt(0, possible.size());
-        secondChoice = randInt(0, possible.size());
-
-        while(true){
-            if(secondChoice==firstChoice)   secondChoice = randInt(0, possible.size());
-            else break;
-        }
-        //
-        Log.d("COMPUTER_PLAY", "PLAYING:" + firstChoice);
-        button_field[possibleArray[firstChoice]].performClick();
-        try {
-            Log.d("EXCEPTION", "DELAYING");
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            Log.d("EXCEPTION", "TIME DELAY ERROR");
-        }
-
-        Log.d("COMPUTER_PLAY", "PLAYING:" + secondChoice);
-        button_field[possibleArray[secondChoice]].performClick();
-        try {
-            Log.d("EXCEPTION", "DELAYING");
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            Log.d("EXCEPTION", "TIME DELAY ERROR");
-        }
-    };
-
-*/
     public void computerPlay(){
         int firstChoice;
-        int secondChoice;
 
         List<Integer> possible = new ArrayList<Integer>();
 
@@ -634,24 +600,13 @@ public class SinglePlayerActivity8 extends ActionBarActivity {
         }
 
         firstChoice = randInt(0, possible.size());
-        secondChoice = randInt(0, possible.size());
 
-        while(true){
-            if(secondChoice==firstChoice)   secondChoice = randInt(0, possible.size());
-            else break;
-        }
         Integer[] possibleArray = new Integer[ possible.size() ];
         possible.toArray(possibleArray);
 
+        Log.d("SLEEP", "Performing click one before sleep...");
         button_field[possibleArray[firstChoice]].performClick();
-        Log.d("SLEEP", "Entering sleep...");
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        Log.d("SLEEP", "Entering sleep...");
-        button_field[possibleArray[secondChoice]].performClick();
-    }
+        Log.d("SLEEP", "Perfored click one before sleep...");
 
+    }
 }

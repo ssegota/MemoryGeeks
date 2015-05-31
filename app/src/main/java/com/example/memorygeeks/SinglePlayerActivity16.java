@@ -796,6 +796,18 @@ public class SinglePlayerActivity16 extends ActionBarActivity {
 
         if(!turn){
             isDone();
+
+            computerPlay();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // This method will be executed once the timer is over
+                    // Start your app main activity
+                    computerPlay();  // your method call
+                }
+            }, delay + 100);
         }
         isDone();
     };
@@ -845,6 +857,26 @@ public class SinglePlayerActivity16 extends ActionBarActivity {
         for(int i = 0; i < numberOfTiles; i++){
             tiles[i]=sortTiles[type[i]];
         }
+    }
+
+    public void computerPlay(){
+        int firstChoice;
+
+        List<Integer> possible = new ArrayList<Integer>();
+
+        for (int i = 0; i<numberOfTiles; i++){
+            if(!isFound[i]) possible.add(i);
+        }
+
+        firstChoice = randInt(0, possible.size());
+
+        Integer[] possibleArray = new Integer[ possible.size() ];
+        possible.toArray(possibleArray);
+
+        Log.d("SLEEP", "Performing click one before sleep...");
+        button_field[possibleArray[firstChoice]].performClick();
+        Log.d("SLEEP", "Perfored click one before sleep...");
+
     }
 
 }
